@@ -22,7 +22,7 @@ function limparId(valor) {
 
 
 function criarEmailInterno(idFuncionario) {
-    return `${idFuncionario}@bennys.com`;
+    return `${idFuncionario}@bennys.local`;
 }
 
 
