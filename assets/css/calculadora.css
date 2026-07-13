@@ -1,0 +1,394 @@
+.cabecalho-pagina {
+    padding: 24px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(213, 0, 0, 0.14),
+            rgba(20, 20, 20, 0.95)
+        );
+
+    border: 1px solid #3a2222;
+    border-radius: 16px;
+}
+
+.cabecalho-pagina h2 {
+    margin-top: 5px;
+    font-size: 28px;
+}
+
+.cabecalho-pagina > div > p:last-child {
+    margin-top: 7px;
+    color: #b7b7b7;
+    font-size: 13px;
+}
+
+.painel-calculadora,
+.orcamento {
+    margin-top: 20px;
+    padding: 22px;
+
+    background: #151515;
+    border: 1px solid #303030;
+    border-radius: 14px;
+}
+
+.bloco-calculadora + .bloco-calculadora {
+    margin-top: 22px;
+    padding-top: 22px;
+    border-top: 1px solid #303030;
+}
+
+.bloco-calculadora h2 {
+    margin-bottom: 13px;
+    font-size: 20px;
+}
+
+.lista-servicos {
+    display: grid;
+    gap: 10px;
+}
+
+.servico {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+
+    padding: 13px 14px;
+
+    background: #1d1d1d;
+    border: 1px solid #363636;
+    border-radius: 10px;
+}
+
+.servico > div {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.servico strong {
+    color: #ffffff;
+    font-size: 15px;
+}
+
+.servico span {
+    color: #b7b7b7;
+    font-size: 13px;
+}
+
+.servico input {
+    width: 88px;
+    min-width: 88px;
+    padding: 10px 8px;
+
+    background: #0b0b0b;
+    border: 1px solid #4b4b4b;
+    border-radius: 8px;
+
+    color: #ffffff;
+    font-size: 16px;
+    text-align: center;
+    outline: none;
+}
+
+.servico input:focus {
+    border-color: #d50000;
+    box-shadow: 0 0 0 2px rgba(213, 0, 0, 0.14);
+}
+
+.opcao-checkbox {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    padding: 13px 14px;
+
+    background: #1d1d1d;
+    border: 1px solid #363636;
+    border-radius: 10px;
+
+    color: #ffffff;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.opcao-checkbox input {
+    width: 18px;
+    height: 18px;
+    accent-color: #d50000;
+}
+
+.campo-escondido {
+    display: none;
+
+    margin-top: 14px;
+    padding: 14px;
+
+    background: #0e0e0e;
+    border: 1px solid #303030;
+    border-radius: 10px;
+}
+
+.campo-escondido.ativo {
+    display: block;
+}
+
+.campo-escondido > label {
+    display: block;
+    margin-bottom: 8px;
+
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+#tuning,
+#local {
+    width: 100%;
+    padding: 12px;
+
+    background: #1d1d1d;
+    border: 1px solid #424242;
+    border-radius: 9px;
+
+    color: #ffffff;
+    outline: none;
+}
+
+#tuning:focus,
+#local:focus {
+    border-color: #d50000;
+    box-shadow: 0 0 0 2px rgba(213, 0, 0, 0.13);
+}
+
+.linha-calculo {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+
+    margin-top: 13px;
+    padding-top: 13px;
+
+    border-top: 1px solid #303030;
+
+    color: #b7b7b7;
+}
+
+.linha-calculo strong {
+    color: #ffd166;
+}
+
+.parcerias {
+    display: grid;
+    gap: 9px;
+}
+
+.opcao-parceria {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+
+    padding: 12px 13px;
+
+    background: #1d1d1d;
+    border: 1px solid #383838;
+    border-radius: 10px;
+
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.opcao-parceria:hover {
+    border-color: #6a1b1b;
+}
+
+.opcao-parceria:has(input:checked) {
+    background: #281111;
+    border-color: #d50000;
+    box-shadow: inset 4px 0 0 #d50000;
+}
+
+.opcao-parceria input {
+    width: 18px;
+    height: 18px;
+    accent-color: #d50000;
+}
+
+.opcao-parceria > span {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.opcao-parceria strong {
+    color: #ffffff;
+    font-size: 14px;
+}
+
+.opcao-parceria small {
+    color: #b7b7b7;
+    font-size: 12px;
+}
+
+.botoes-calculadora {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 11px;
+
+    margin-top: 24px;
+}
+
+.botoes-calculadora button {
+    min-height: 49px;
+
+    border: none;
+    border-radius: 10px;
+
+    color: #ffffff;
+    font-weight: bold;
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+.botao-calcular {
+    background: #d50000;
+}
+
+.botao-calcular:hover {
+    background: #ff3030;
+    transform: translateY(-1px);
+}
+
+.botao-limpar {
+    background: #3a3a3a;
+}
+
+.botao-limpar:hover {
+    background: #525252;
+    transform: translateY(-1px);
+}
+
+.orcamento h2 {
+    margin-bottom: 15px;
+    color: #ff3030;
+    font-size: 20px;
+}
+
+#resumoServicos {
+    margin-bottom: 16px;
+}
+
+.item-resumo {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+
+    padding: 8px 0;
+
+    border-bottom: 1px solid #242424;
+
+    color: #d5d5d5;
+    font-size: 14px;
+}
+
+.item-resumo:last-child {
+    border-bottom: none;
+}
+
+.item-resumo strong {
+    color: #ffffff;
+}
+
+.vazio {
+    color: #8f8f8f;
+    font-size: 14px;
+}
+
+.linha-resumo {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+
+    padding: 8px 0;
+
+    color: #c9c9c9;
+    font-size: 14px;
+}
+
+.linha-resumo strong {
+    color: #ffffff;
+}
+
+#valorDesconto {
+    color: #ff7070;
+}
+
+#servicosComDesconto {
+    color: #8fd3ff;
+}
+
+#valorTuningResumo {
+    color: #ffd166;
+}
+
+#valorDeslocamento {
+    color: #9ed0ff;
+}
+
+.linha-resumo.total {
+    margin-top: 10px;
+    padding-top: 16px;
+
+    border-top: 1px solid #3b3b3b;
+
+    color: #ffffff;
+    font-size: 21px;
+    font-weight: bold;
+}
+
+#resultado {
+    color: #39e58c;
+    font-size: 24px;
+    text-shadow: 0 0 10px rgba(57, 229, 140, 0.24);
+}
+
+@media (max-width: 760px) {
+    .cabecalho-pagina {
+        padding: 19px;
+    }
+
+    .cabecalho-pagina h2 {
+        font-size: 24px;
+    }
+
+    .painel-calculadora,
+    .orcamento {
+        padding: 18px 14px;
+    }
+
+    .botoes-calculadora {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .servico {
+        padding: 12px;
+    }
+
+    .servico input {
+        width: 76px;
+        min-width: 76px;
+    }
+
+    .linha-resumo.total {
+        font-size: 18px;
+    }
+
+    #resultado {
+        font-size: 21px;
+    }
+}
