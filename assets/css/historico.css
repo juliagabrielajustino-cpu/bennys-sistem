@@ -1,0 +1,286 @@
+.cabecalho-pagina {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+
+    padding: 24px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(213, 0, 0, 0.14),
+            rgba(20, 20, 20, 0.95)
+        );
+
+    border: 1px solid #3a2222;
+    border-radius: 16px;
+}
+
+.cabecalho-pagina h2 {
+    margin-top: 5px;
+    font-size: 28px;
+}
+
+.cabecalho-pagina > div > p:last-child {
+    margin-top: 7px;
+    color: #b7b7b7;
+    font-size: 13px;
+}
+
+.resumo-total {
+    min-width: 180px;
+    padding: 14px 18px;
+
+    background: rgba(0, 0, 0, 0.28);
+    border: 1px solid #4a3030;
+    border-radius: 11px;
+
+    text-align: right;
+}
+
+.resumo-total span,
+.resumo-total strong {
+    display: block;
+}
+
+.resumo-total span {
+    color: #b7b7b7;
+    font-size: 12px;
+}
+
+.resumo-total strong {
+    margin-top: 5px;
+    color: #39e58c;
+    font-size: 24px;
+}
+
+.painel-filtros {
+    display: flex;
+    align-items: end;
+    gap: 14px;
+
+    margin-top: 20px;
+    padding: 20px;
+
+    background: #151515;
+    border: 1px solid #303030;
+    border-radius: 14px;
+}
+
+.campo-filtro {
+    flex: 1;
+}
+
+.campo-filtro label {
+    display: block;
+    margin-bottom: 8px;
+
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+#filtroPeriodo {
+    width: 100%;
+    padding: 12px;
+
+    background: #1d1d1d;
+    border: 1px solid #424242;
+    border-radius: 9px;
+
+    color: #ffffff;
+    outline: none;
+}
+
+#filtroPeriodo:focus {
+    border-color: #d50000;
+    box-shadow: 0 0 0 2px rgba(213, 0, 0, 0.13);
+}
+
+.botao-atualizar {
+    min-height: 45px;
+    padding: 0 20px;
+
+    border: none;
+    border-radius: 9px;
+
+    background: #d50000;
+    color: #ffffff;
+
+    font-weight: bold;
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+.botao-atualizar:hover {
+    background: #ff3030;
+    transform: translateY(-1px);
+}
+
+.resumo-historico {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 14px;
+
+    margin-top: 20px;
+}
+
+.cartao-resumo {
+    padding: 18px;
+
+    background: #151515;
+    border: 1px solid #303030;
+    border-radius: 13px;
+}
+
+.cartao-resumo span,
+.cartao-resumo strong {
+    display: block;
+}
+
+.cartao-resumo span {
+    color: #b7b7b7;
+    font-size: 12px;
+}
+
+.cartao-resumo strong {
+    margin-top: 7px;
+    color: #ffffff;
+    font-size: 23px;
+}
+
+.painel-historico {
+    margin-top: 20px;
+    padding: 22px;
+
+    background: #151515;
+    border: 1px solid #303030;
+    border-radius: 14px;
+}
+
+.titulo-historico h2 {
+    font-size: 20px;
+}
+
+.titulo-historico p {
+    margin-top: 5px;
+    color: #b7b7b7;
+    font-size: 13px;
+}
+
+#listaHistorico {
+    display: grid;
+    gap: 11px;
+    margin-top: 18px;
+}
+
+.registro-historico {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr 1fr 1fr 1fr;
+    gap: 12px;
+
+    padding: 14px;
+
+    background: #1d1d1d;
+    border: 1px solid #363636;
+    border-radius: 10px;
+}
+
+.registro-historico div {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.registro-historico span {
+    color: #9f9f9f;
+    font-size: 11px;
+}
+
+.registro-historico strong {
+    color: #ffffff;
+    font-size: 13px;
+}
+
+.status-registro {
+    width: fit-content;
+    padding: 5px 8px;
+
+    border-radius: 999px;
+
+    font-size: 11px;
+    font-weight: bold;
+}
+
+.status-registro.finalizado {
+    background: rgba(57, 229, 140, 0.12);
+    color: #39e58c;
+    border: 1px solid rgba(57, 229, 140, 0.3);
+}
+
+.status-registro.aberto {
+    background: rgba(255, 209, 102, 0.12);
+    color: #ffd166;
+    border: 1px solid rgba(255, 209, 102, 0.3);
+}
+
+.carregando,
+.sem-registros,
+.erro-historico {
+    padding: 22px;
+
+    color: #9b9b9b;
+    text-align: center;
+}
+
+.erro-historico {
+    color: #ff7373;
+}
+
+@media (max-width: 950px) {
+    .registro-historico {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 760px) {
+    .cabecalho-pagina {
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 19px;
+    }
+
+    .cabecalho-pagina h2 {
+        font-size: 24px;
+    }
+
+    .resumo-total {
+        width: 100%;
+        text-align: left;
+    }
+
+    .painel-filtros {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .botao-atualizar {
+        width: 100%;
+    }
+
+    .resumo-historico {
+        grid-template-columns: 1fr;
+    }
+
+    .painel-historico {
+        padding: 18px 14px;
+    }
+}
+
+@media (max-width: 500px) {
+    .registro-historico {
+        grid-template-columns: 1fr;
+    }
+}
